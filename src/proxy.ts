@@ -26,10 +26,8 @@ export default clerkMiddleware(async (auth, request) => {
       await auth.protect();
     }
 
-    // If logged in but not admin, redirect to home
-    if (role !== 'ADMIN') {
-      return NextResponse.redirect(new URL('/', request.url));
-    }
+    // Role check is now handled in /admin/layout.tsx to avoid sync issues
+    // We allow the request to proceed if authenticated
   }
 
   if (!isPublicRoute(request)) {

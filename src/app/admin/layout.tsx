@@ -2,7 +2,26 @@ import type { ReactNode } from "react";
 import Sidebar from "./_components/sidebar";
 import Topbar from "./_components/topbar";
 
-const AdminLayout = ({ children }: { children: ReactNode }) => {
+import { auth } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
+import { prisma } from "@/lib/db";
+
+const AdminLayout = async ({ children }: { children: ReactNode }) => {
+  const { userId } = await auth();
+
+  if (!userId) {
+    redirect("/sign-in");
+  }
+
+  const user = await prisma.user.findUnique({
+    where: { id: userId },
+    select: { role: true },
+  });
+
+  if (!user || user.role !== "ADMIN") {
+    redirect("/");
+  }
+
   return (
     <div className="flex h-screen overflow-hidden bg-slate-50">
       <Sidebar />
