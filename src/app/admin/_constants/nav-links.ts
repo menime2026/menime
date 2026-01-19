@@ -75,31 +75,31 @@ export type MenuItem =
 
 export const MENUITEMS: MenuItem[] = [
   {
-    label: "FORMAL",
+    label: "Formal",
     href: "/collections/formal",
     type: "mega",
     columns: [
       {
-        title: "TAILORING",
+        title: "Tailoring",
         links: [
-          { label: "Beaded Blazer", href: "/products/beaded-blazer" },
-          { label: "Flared Trousers", href: "/products/formal-flared-trousers" },
+          { label: "Beaded blazer", href: "/products/beaded-blazer" },
+          { label: "Flared trousers", href: "/products/formal-flared-trousers" },
           { label: "Suits", href: "/collections/suits" },
           { label: "Tuxedos", href: "/collections/tuxedos" },
           { label: "Waistcoats", href: "/collections/waistcoats" },
         ],
       },
       {
-        title: "COUTURE",
+        title: "Couture",
         links: [
-          { label: "Evening Gowns", href: "/collections/evening-gowns" },
-          { label: "Cocktail", href: "/collections/cocktail-dresses" },
-          { label: "Atelier Line", href: "/collections/atelier-line" },
-          { label: "Runway", href: "/collections/runway" },
+          { label: "Evening gowns", href: "/collections/evening-gowns" },
+          { label: "Cocktail dresses", href: "/collections/cocktail-dresses" },
+          { label: "Atelier line", href: "/collections/atelier-line" },
+          { label: "Runway pieces", href: "/collections/runway" },
         ],
       },
       {
-        title: "TRADITION",
+        title: "Tradition",
         links: [
           { label: "Kurtas", href: "/collections/women-kurtas" },
           { label: "Lehengas", href: "/collections/women-lehengas" },
@@ -110,38 +110,64 @@ export const MENUITEMS: MenuItem[] = [
     image: "/formal-luxury.jpg",
   },
   {
-    label: "INFORMAL",
+    label: "Informal",
     href: "/collections/informal",
     type: "mega",
     columns: [
       {
-        title: "DENIM",
+        title: "Denim",
         links: [
-          { label: "Wide Leg", href: "/collections/women-jeans-wide-leg" },
-          { label: "Flare", href: "/collections/women-jeans-flare" },
-          { label: "Black Wash", href: "/collections/ultimate-black" },
-          { label: "Raw Denim", href: "/collections/women-jeans-raw" },
+          { label: "Wide leg", href: "/collections/women-jeans-wide-leg" },
+          { label: "Flare jeans", href: "/collections/women-jeans-flare" },
+          { label: "Black wash", href: "/collections/ultimate-black" },
+          { label: "Raw denim", href: "/collections/women-jeans-raw" },
         ],
       },
       {
-        title: "LEISURE",
+        title: "Leisure",
         links: [
           { label: "Cashmere", href: "/collections/cashmere" },
-          { label: "Lounge Sets", href: "/collections/lounge" },
-          { label: "Silk Camis", href: "/collections/women-tops" },
-          { label: "Designer Tees", href: "/collections/women-tshirts" },
+          { label: "Lounge sets", href: "/collections/lounge" },
+          { label: "Silk camis", href: "/collections/women-tops" },
+          { label: "Designer tees", href: "/collections/women-tshirts" },
         ],
       },
       {
-        title: "DAILY",
+        title: "Daily",
         links: [
-          { label: "Linen", href: "/collections/linen-edits" },
+          { label: "Linen edits", href: "/collections/linen-edits" },
           { label: "Blouses", href: "/collections/women-blouses" },
-          { label: "Fusion Wear", href: "/collections/women-indo-western" },
-          { label: "New Drops", href: "/collections/new-arrivals" },
+          { label: "Fusion wear", href: "/collections/women-indo-western" },
+          { label: "New drops", href: "/collections/new-arrivals" },
         ],
       },
     ],
     image: "/casual-luxury.jpg",
+  },
+  {
+    label: "Collections",
+    href: "/collections/curated",
+    type: "mega",
+    columns: [
+      {
+        title: "Featured",
+        links: [
+          { label: "New arrivals", href: "/collections/new-arrivals" },
+          { label: "Best sellers", href: "/collections/trending" },
+          { label: "Limited edition", href: "/collections/limited" },
+          { label: "Private sale", href: "/collections/sale" },
+        ],
+      },
+      {
+        title: "Shop by brand",
+        links: [
+          { label: "Parisian series", href: "/collections/parisian" },
+          { label: "Milan edits", href: "/collections/milan" },
+          { label: "Heritage prints", href: "/collections/heritage-prints" },
+          { label: "Designer collabs", href: "/collections/collabs" },
+        ],
+      },
+    ],
+    image: "/branded-collections.jpg",
   },
 ];
