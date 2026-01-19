@@ -18,7 +18,8 @@ const isAdminRoute = createRouteMatcher(['/admin(.*)']);
 export default clerkMiddleware(async (auth, request) => {
   if (isAdminRoute(request)) {
     const { userId, sessionClaims } = await auth();
-    const role = (sessionClaims?.metadata as { role?: string })?.role;
+    const metadata = sessionClaims?.metadata || sessionClaims?.publicMetadata || sessionClaims?.public_metadata;
+    const role = (metadata as { role?: string })?.role;
 
     // If not logged in, redirect to sign-in
     if (!userId) {
