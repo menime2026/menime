@@ -6,48 +6,46 @@ import {
   ShoppingCart,
   BarChart3,
   LayoutTemplate,
+  Home,
 } from "lucide-react";
 
 export const ADMIN_NAV_LINKS = [
   {
-    label: "Dashboard",
+    label: "Executive Overview",
     href: "/admin/dashboard",
     icon: LayoutDashboard,
   },
   {
-    label: "Homepage",
+    label: "Storefront Experience",
     href: "/admin/homepage",
     icon: LayoutTemplate,
   },
   {
-    label: "Products",
+    label: "Global Inventory",
     href: "/admin/products",
     icon: PackageSearch,
   },
   {
-    label: "Collections",
+    label: "Curated Collections",
     href: "/admin/collections",
     icon: Tags,
   },
   {
-    label: "Customers",
+    label: "Clientele",
     href: "/admin/customer",
     icon: Users2,
   },
   {
-    label: "Orders",
+    label: "Order Fulfillment",
     href: "/admin/order",
     icon: ShoppingCart,
   },
   {
-    label: "Reports",
+    label: "Analytics & Insights",
     href: "/admin/report",
     icon: BarChart3,
   },
 ] as const;
-
-
-
 
 export type MenuSublink = {
   label: string;
@@ -78,125 +76,146 @@ export type MenuItem =
 
 export const MENUITEMS: MenuItem[] = [
   {
-    label: "SALE",
+    label: "HOME",
+    href: "/",
+    type: "simple",
+  },
+  {
+    label: "THE ARCHIVE",
     href: "/collections/sale",
     type: "simple",
     isSale: true,
     sublinks: [
-      { label: "ALL SALE", href: "/collections/sale" },
-      { label: "DRESSES", href: "/collections/sale-dresses" },
-      { label: "TOPS", href: "/collections/sale-tops" },
-      { label: "JEANS", href: "/collections/sale-jeans" },
+      { label: "SEASONAL CLEARANCE", href: "/collections/sale" },
+      { label: "SIGNATURE DRESSES", href: "/collections/sale-dresses" },
+      { label: "PREMIUM TOPS", href: "/collections/sale-tops" },
+      { label: "ARCHIVE DENIM", href: "/collections/sale-jeans" },
     ],
   },
   {
-    label: "CLOTHING",
+    label: "READY-TO-WEAR",
     href: "/collections/women",
     type: "mega",
     columns: [
       {
-        title: "TOPS & BLOUSES",
+        title: "FORMAL & SUITING",
         links: [
-          { label: "T-Shirts", href: "/collections/women-tshirts" },
-          { label: "Tops", href: "/collections/women-tops" },
-          { label: "Blouses", href: "/collections/women-blouses" },
-          { label: "Crop Tops", href: "/collections/women-crop-tops" },
-          { label: "Shirts", href: "/collections/women-shirts" },
-          { label: "Tank Tops", href: "/collections/women-tank-tops" },
-          { label: "Corset Tops", href: "/collections/women-corset-tops" },
-          { label: "Bodysuits", href: "/collections/women-bodysuits" },
+          { label: "Embroidered Beaded Blazer", href: "/products/beaded-blazer" },
+          { label: "Formal Flared Trousers", href: "/products/formal-flared-trousers" },
+          { label: "Tailored Waistcoats", href: "/collections/waistcoats" },
+          { label: "Structured Tuxedos", href: "/collections/tuxedos" },
+          { label: "Executive Silk Blouses", href: "/collections/women-blouses" },
+          { label: "Three-Piece Suits", href: "/collections/suits" },
         ],
       },
       {
-        title: "DRESSES & SKIRTS",
+        title: "DRESSES & GOWNS",
         links: [
-          { label: "Dresses", href: "/collections/women-dresses" },
-          { label: "Maxi Dresses", href: "/collections/women-maxi-dresses" },
-          { label: "Mini Dresses", href: "/collections/women-mini-dresses" },
-          { label: "Midi Dresses", href: "/collections/women-midi-dresses" },
-          { label: "Skirts", href: "/collections/women-skirts" },
-          { label: "Mini Skirts", href: "/collections/women-mini-skirts" },
-          { label: "Maxi Skirts", href: "/collections/women-maxi-skirts" },
+          { label: "Evening Couture", href: "/collections/evening-gowns" },
+          { label: "Cocktail Classics", href: "/collections/cocktail-dresses" },
+          { label: "Silk Maxi Dresses", href: "/collections/women-maxi-dresses" },
+          { label: "Satin Mini Dresses", href: "/collections/women-mini-dresses" },
+          { label: "Midi Sculpture Dresses", href: "/collections/women-midi-dresses" },
+          { label: "Tiered Occasion Gowns", href: "/collections/tiered-dresses" },
         ],
       },
       {
-        title: "BOTTOMS",
+        title: "INFORMAL LUXURY",
         links: [
-          { label: "Jeans", href: "/collections/women-jeans" },
-          { label: "Pants & Trousers", href: "/collections/women-pants-trousers" },
-          { label: "Shorts", href: "/collections/women-shorts" },
-          { label: "Joggers", href: "/collections/women-joggers" },
-          { label: "Leggings", href: "/collections/women-leggings" },
-          { label: "Palazzos", href: "/collections/women-palazzos" },
+          { label: "Cashmere Knitwear", href: "/collections/cashmere" },
+          { label: "Premium Lounge Sets", href: "/collections/lounge" },
+          { label: "Designer T-Shirts", href: "/collections/women-tshirts" },
+          { label: "Silk Camisoles", href: "/collections/women-tops" },
+          { label: "Linen Separates", href: "/collections/linen-edits" },
+          { label: "Relaxed Fit Shirts", href: "/collections/women-shirts" },
         ],
       },
     ],
-    image: "/women-denim-fashion.jpg",
+    image: "/premium-rtw-collection.jpg",
   },
   {
-    label: "JEANS",
+    label: "THE DENIM ATELIER",
     href: "/collections/women-jeans",
     type: "mega",
     columns: [
       {
-        title: "SHOP BY FIT",
+        title: "ARCHITECTURAL FITS",
         links: [
-          { label: "Baggy", href: "/collections/women-jeans-baggy" },
-          { label: "Skinny", href: "/collections/women-jeans-skinny" },
-          { label: "Flare", href: "/collections/women-jeans-flare" },
-          { label: "Loose", href: "/collections/women-jeans-loose" },
-          { label: "Straight", href: "/collections/women-jeans-straight" },
-          { label: "Wide Leg", href: "/collections/women-jeans-wide-leg" },
-          { label: "Bootcut", href: "/collections/women-jeans-bootcut" },
-          { label: "Mom Jeans", href: "/collections/women-jeans-mom" },
+          { label: "Sculpted Wide Leg", href: "/collections/women-jeans-wide-leg" },
+          { label: "Classic Flare", href: "/collections/women-jeans-flare" },
+          { label: "Tailored Straight", href: "/collections/women-jeans-straight" },
+          { label: "Precision Slim", href: "/collections/women-jeans-skinny" },
+          { label: "Modern Loose Fit", href: "/collections/women-jeans-loose" },
         ],
       },
       {
-        title: "SHOP BY RISE",
+        title: "CURATED WASHES",
         links: [
-          { label: "High Rise", href: "/collections/women-jeans-high-rise" },
-          { label: "Mid Rise", href: "/collections/women-jeans-mid-rise" },
-          { label: "Low Rise", href: "/collections/women-jeans-low-rise" },
+          { label: "Ultimate Black", href: "/collections/ultimate-black" },
+          { label: "Midnight Indigo", href: "/collections/women-jeans-dark" },
+          { label: "Vintage Arctic", href: "/collections/women-jeans-light" },
+          { label: "Raw Selvedge", href: "/collections/women-jeans-raw" },
         ],
       },
       {
-        title: "SHOP BY STYLE",
+        title: "DENIM BY RISE",
         links: [
-          { label: "Ripped Jeans", href: "/collections/women-jeans-ripped" },
-          { label: "Distressed", href: "/collections/women-jeans-distressed" },
-          { label: "Vintage Wash", href: "/collections/women-jeans-vintage" },
-          { label: "Dark Wash", href: "/collections/women-jeans-dark" },
-          { label: "Light Wash", href: "/collections/women-jeans-light" },
+          { label: "High-Rise Sculpt", href: "/collections/women-jeans-high-rise" },
+          { label: "Mid-Rise Classic", href: "/collections/women-jeans-mid-rise" },
         ],
       },
     ],
-    image: "/women-denim-fashion.jpg",
+    image: "/luxury-denim-atelier.jpg",
   },
   {
-    label: "ETHNIC WEAR",
+    label: "HERITAGE COUTURE",
     href: "/collections/ethnic",
     type: "mega",
     columns: [
       {
-        title: "TRADITIONAL",
+        title: "TRADITIONAL PIECES",
         links: [
-          { label: "Kurtas", href: "/collections/women-kurtas" },
-          { label: "Kurtis", href: "/collections/women-kurtis" },
-          { label: "Salwar Suits", href: "/collections/women-salwar-suits" },
-          { label: "Anarkalis", href: "/collections/women-anarkalis" },
-          { label: "Lehengas", href: "/collections/women-lehengas" },
+          { label: "Hand-Embroidered Kurtas", href: "/collections/women-kurtas" },
+          { label: "Couture Anarkalis", href: "/collections/women-anarkalis" },
+          { label: "Silk Salwar Suits", href: "/collections/women-salwar-suits" },
+          { label: "Heritage Lehengas", href: "/collections/women-lehengas" },
         ],
       },
       {
-        title: "FUSION",
+        title: "MODERN FUSION",
         links: [
-          { label: "Indo-Western", href: "/collections/women-indo-western" },
-          { label: "Fusion Dresses", href: "/collections/women-fusion-dresses" },
-          { label: "Palazzo Sets", href: "/collections/women-palazzo-sets" },
+          { label: "Indo-Western Gowns", href: "/collections/women-indo-western" },
+          { label: "Fusion Evening-wear", href: "/collections/women-fusion-dresses" },
+          { label: "Palazzo Co-ords", href: "/collections/women-palazzo-sets" },
         ],
       },
     ],
-    image: "/women-denim-fashion.jpg",
+    image: "/heritage-couture.jpg",
+  },
+  {
+    label: "BRANDED COLLECTIONS",
+    href: "/collections/branded",
+    type: "mega",
+    columns: [
+      {
+        title: "DESIGNER EDITS",
+        links: [
+          { label: "THE ATELIER LINE", href: "/collections/atelier-line" },
+          { label: "PARISIAN SERIES", href: "/collections/parisian" },
+          { label: "MILAN EDITS", href: "/collections/milan" },
+          { label: "HERITAGE PRINTS", href: "/collections/heritage-prints" },
+        ],
+      },
+      {
+        title: "LIMITED RELEASES",
+        links: [
+          { label: "RUNWAY EXCLUSIVES", href: "/collections/runway" },
+          { label: "COLLECTOR PIECES", href: "/collections/collectors" },
+          { label: "DESIGNER COLLABS", href: "/collections/collabs" },
+        ],
+      },
+    ],
+    image: "/branded-collections.jpg",
   },
   {
     label: "NEW ARRIVALS",
@@ -204,20 +223,9 @@ export const MENUITEMS: MenuItem[] = [
     type: "simple",
     sublinks: [
       { label: "JUST DROPPED", href: "/collections/new-arrivals" },
-      { label: "TRENDING NOW", href: "/collections/trending" },
-      { label: "ONLINE EXCLUSIVE", href: "/collections/online-exclusive" },
-      { label: "BACK IN STOCK", href: "/collections/back-in-stock" },
-    ],
-  },
-  {
-    label: "FEATURED",
-    href: "/collections/featured",
-    type: "simple",
-    sublinks: [
-      { label: "WINTER ESSENTIALS", href: "/collections/winter-essentials" },
-      { label: "PREMIUM COLLECTION", href: "/collections/premium" },
-      { label: "PARTY WEAR", href: "/collections/party-wear" },
-      { label: "WORKWEAR", href: "/collections/workwear" },
+      { label: "TRENDING EDITS", href: "/collections/trending" },
+      { label: "BOUTIQUE EXCLUSIVE", href: "/collections/online-exclusive" },
+      { label: "RESTOCKED ICONS", href: "/collections/back-in-stock" },
     ],
   },
 ];
